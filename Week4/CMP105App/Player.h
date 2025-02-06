@@ -15,7 +15,7 @@ public:
 	Player();
 	~Player();
 
-	void handlePlayerInput(float dt);
+	void handlePlayerInput(/*float dt*/);
 	void drawSprite();
 
 

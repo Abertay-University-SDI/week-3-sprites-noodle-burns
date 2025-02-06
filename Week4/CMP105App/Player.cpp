@@ -25,11 +25,11 @@ Player::~Player() {
 
 
 
-void Player::handlePlayerInput(float dt) {
+void Player::handlePlayerInput(/*float dt*/ ) {
 
 	sf::Vector2i currentPos = sf::Vector2i(playerObject.getPosition());
 
-	if (input->isKeyDown(sf::Keyboard::W)) {
+	if (input->isKeyDown(sf::Keyboard::W)) { //complaining about isKeyDown
 		currentPos.y += 2;
 	}
 	if (input->isKeyDown(sf::Keyboard::A)) {

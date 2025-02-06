@@ -30,7 +30,7 @@ void Level::handleInput(float dt)
 		window->close();
 	}
 
-	//player.handlePlayerInput(input);
+	player.handlePlayerInput();
 
 }
 
