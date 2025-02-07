@@ -15,7 +15,10 @@ public:
 	Player();
 	~Player();
 
-	void handlePlayerInput(/*float dt*/);
+
+	void handleInput(float dt, Input* input);
+	void update(float dt);
+
 	void drawSprite();
 
 

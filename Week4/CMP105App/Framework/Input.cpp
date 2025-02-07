@@ -33,7 +33,7 @@ bool Input::isKeyDown(int key)
 {
 	if (key >= 0)
 	{
-		return keys[key];
+		return keys[key];//
 	}
 	return false;
 }

@@ -20,8 +20,7 @@ public:
 
 private:
 	// Level objects
-	/*GameObject testSprite;
-	sf::Texture texture;*/
+
 	Player player;
 	sf::Texture playerTexture;
 

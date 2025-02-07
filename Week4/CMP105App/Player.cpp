@@ -2,9 +2,10 @@
 
 Player::Player() {
 
+
 	//initial player object
 
-	playerObject.setInput(input);
+	//playerObject.setInput(input);
 
 
 	//setting sprite texture
@@ -24,26 +25,36 @@ Player::~Player() {
 }
 
 
+void Player::handleInput(float dt , Input* input) {
 
-void Player::handlePlayerInput(/*float dt*/ ) {
-
+	//player move using wasd
 	sf::Vector2i currentPos = sf::Vector2i(playerObject.getPosition());
 
-	if (input->isKeyDown(sf::Keyboard::W)) { //complaining about isKeyDown
-		currentPos.y += 2;
+	if (input->isKeyDown(sf::Keyboard::W)) {
+		currentPos.y -= 2;
+		std::cout << "W\n";
 	}
 	if (input->isKeyDown(sf::Keyboard::A)) {
 		currentPos.x -= 2;
+		std::cout << "A\n";
 	}
 	if (input->isKeyDown(sf::Keyboard::S)) {
-		currentPos.y -= 2;
+		currentPos.y += 2;
+		std::cout << "S\n";
 	}
 	if (input->isKeyDown(sf::Keyboard::D)) {
 		currentPos.x += 2;
+		std::cout << "D\n";
 	}
 
-	playerObject.setPosition(currentPos.x, currentPos.y);
+	//playerObject.setPosition(currentPos.x, currentPos.y);
+
 }
+
+void Player::update(float dt) {
+
+}
+
 
 
 void Player::drawSprite() {
